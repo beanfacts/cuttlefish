@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cuttlefish"
+version = "1.0.0"
+description = "Abstraction library for Ceph cluster functionality"
+authors = [
+    { name = "Tim Dettmar", email = "beanfacts@protonmail.com" }
+]
+license = "AGPL-3.0-only"
+dependencies = [
+    "setuptools",
+    "pydantic",
+    "dnspython",
+    "enlighten"
+]
+
+[tool.setuptools]
+packages = ["cuttlefish"]
+package-dir = {"" = "src"}
+
+[project.scripts]
+cuttle = "cuttlefish.cli:main"
+cuttlefish = "cuttlefish.cli:main"

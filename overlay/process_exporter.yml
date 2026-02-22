@@ -1,0 +1,8 @@
+process_names:
+  - name: "{{.Comm}}"
+    cmdline:
+    - ceph-mon
+    - ceph-osd
+    - ceph-mgr
+    - ceph-mds
+    - radosgw
